@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import CardNota from './CardNota';
+import CardNota from '../CardNota';
+import './estilo.css';
 //o map (que devolve uma lista) vai pegar cada uma das categorias em " "e usar como
 //e vai passar pra uma função e na função é preciso 
 //retornar o que vai ser renderizado
@@ -7,16 +8,15 @@ import CardNota from './CardNota';
 class ListaDeNotas extends Component{
   render(){
     return(
-      <ul>
-        {Array.of("Trabalho", "Trabalho", "Estudos").map((categoria) => {
+      <ul className="lista-notas">
+        {Array.of("Trabalho", "Trabalho", "Estudos").map((categoria, index) => {
           return (
-            <li>
+            <li className="lista-notas_item" key={index}>
               <div>{categoria}</div>
               <CardNota />
             </li>
           );
         })}
-        
       </ul>
     )
   }

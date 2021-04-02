@@ -6,10 +6,11 @@ import './estilo.css';
 //retornar o que vai ser renderizado
 // o array.of ta criando um array com os 3 elementos criados
 class ListaDeNotas extends Component{
+  
   render(){
     return(
       <ul className="lista-notas">
-        {Array.of("Trabalho", "Trabalho", "Estudos").map((categoria, index) => {
+        {this.props.notas.map((nota, index) => {
           return (
             <li className="lista-notas_item" key={index}>
               <CardNota />

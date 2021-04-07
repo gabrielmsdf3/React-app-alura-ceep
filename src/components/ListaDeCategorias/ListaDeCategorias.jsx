@@ -21,7 +21,6 @@ class ListaDeCategorias extends Component {
           )
         })}
           
-         
         </ul>
         <input type="text"
         className="lista-categorias_input"
